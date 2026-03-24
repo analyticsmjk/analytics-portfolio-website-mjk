@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en-gb"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Search - Analytics Portfolio Website@Mathew Jacob Kavalam</title><meta name="robots" content="noindex, follow"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="alternate" type="application/json" href="https://www.mathewjkavalam.com/feed.json" title="Analytics Portfolio Website@Mathew Jacob Kavalam - JSON"><meta property="og:title" content="Analytics Portfolio Website@Mathew Jacob Kavalam"><meta property="og:site_name" content="Analytics Portfolio Website@Mathew Jacob Kavalam"><meta property="og:description" content=""><meta property="og:url" content="https://www.mathewjkavalam.com/"><meta property="og:type" content="website"><link rel="stylesheet" href="https://www.mathewjkavalam.com/assets/css/style.css?v=e280c87ce8b2ff56c2ba665e66dc1ec8"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"Analytics Portfolio Website@Mathew Jacob Kavalam","url":"https://www.mathewjkavalam.com/","sameAs":["https://www.linkedin.com/in/mathew-jacob-kavalam/"]}</script><noscript><style>img[loading] {
+                    opacity: 1;
+                }</style></noscript></head><body class="search-template"><header class="top js-header"><a class="logo" href="https://www.mathewjkavalam.com/">Analytics Portfolio Website@Mathew Jacob Kavalam</a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu" aria-haspopup="true" aria-expanded="false"><span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span></button><ul class="navbar__menu"><li><a href="https://www.mathewjkavalam.com/about/" target="_self">About</a></li></ul></nav><div class="search"><div class="search__overlay js-search-overlay"><div class="wrapper search__overlay-inner"><form action="https://www.mathewjkavalam.com/search.html" class="search__form"><input class="search__input" type="search" name="q" placeholder="search..." aria-label="search..." required></form></div></div><button class="search__btn btn--icon js-search-btn" aria-label="Search"><svg height="18" width="18" role="presentation" focusable="false"><use xlink:href="https://www.mathewjkavalam.com/assets/svg/svg-map.svg#search"/></svg></button></div></header><main class="page page--search"><div class="content search-page"><div class="hero hero--noimage"><header class="hero__content hero__content--centered"><div class="wrapper"><h1>Search</h1></div></header></div><div class="entry-wrapper content__entry"><form action="javascript:void(0);" class="search-page-form" onsubmit="return false;"><input type="search" id="live-search-input" placeholder="search..." class="search-page-input" required></form><div id="search-results"></div><script src="https://www.mathewjkavalam.com/media/plugins/staticFuzzySearch/fuse.js"></script><script>(async function () {
+					const searchInput = document.getElementById("live-search-input");
+					const resultsContainer = document.getElementById("search-results");
+	
+					// Get URL query param
+					const params = new URLSearchParams(window.location.search);
+					const searchTermFromURL = params.get("q") || "";
+	
+					// Fetch data
+					const response = await fetch("./feed.json");
+					const jsonData = await response.json();
+					const items = jsonData.items;
+	
+					const fuse = new Fuse(items, {
+						keys: ["title", "summary", "tags"],
+						isCaseSensitive: false,
+						includeScore: true,
+						includeMatches: true,
+						findAllMatches: false,
+						minMatchCharLength: 2,
+						shouldSort: true,
+						ignoreLocation: false,
+						ignoreDiacritics: false,
+						useExtendedSearch: false,
+						threshold: 0.6,
+						location: 0,
+						fieldNormWeight: 1,
+						ignoreFieldNorm: false,
+						distance: 100
+					});
+
+					function highlightMatches(text, matches, key) {
+						if (!matches) return text;
+
+						let match = matches.find(m => m.key === key);
+						if (!match) return text;
+
+						let offset = 0;
+						let highlighted = text;
+
+						match.indices.forEach(([start, end]) => {
+							const realStart = start + offset;
+							const realEnd = end + offset + 1;
+
+							const original = highlighted.slice(realStart, realEnd);
+							const replacement = "<mark>" + original + "</mark>";
+							
+							highlighted = highlighted.slice(0, realStart) + replacement + highlighted.slice(realEnd);
+
+							offset += "<mark></mark>".length;
+						});
+
+						return highlighted;
+					}
+
+					function renderResults(results) {
+						resultsContainer.innerHTML = "";
+	
+						if (results.length === 0) {
+							resultsContainer.innerHTML = "<p>No Results Found</p>";
+							return;
+						}
+	
+						results.forEach(result => {
+							const item = result.item;
+							const title = highlightMatches(item.title || "", result.matches, "title");
+							const summary = highlightMatches(item.summary || "", result.matches, "summary");
+
+							const url = item.url || "#";
+	
+							const resultHTML = `
+								<div class="search-result-item">
+									<h5><a href="${url}">${title}</a></h5>
+									<p>${summary}</p>
+								</div>
+							`;
+							resultsContainer.innerHTML += resultHTML;
+						});
+					}
+	
+					function performSearch(term) {
+						if (term.length < 2) {
+							resultsContainer.innerHTML = "";
+							return;
+						}
+						history.replaceState(null, "", "?q=" + encodeURIComponent(term));
+
+						const results = fuse.search(term);
+						renderResults(results);
+					}
+	
+					// Live input
+					searchInput.addEventListener("input", (e) => {
+						const term = e.target.value.trim();
+						performSearch(term);
+					});
+	
+					// If search term exists in URL, trigger search
+					if (searchTermFromURL) {
+						searchInput.value = searchTermFromURL;
+						performSearch(searchTermFromURL);
+					}
+				})();</script></div></div></main><footer class="footer"><div class="wrapper"><div class="footer__copyright"><p class="align-center"><a href="mailto:hello@mathewjkavalam.com?subject=Saw%20your%20analytics%20work&amp;body=Ich%20bin...">Say Hi!</a><br>Copyright © Mathew Jacob Kavalam. Analytics Portfolio Website MMXXVI</p></div><div class="footer__social"><a href="https://www.linkedin.com/in/mathew-jacob-kavalam/" aria-label="LinkedIn"><svg><use xlink:href="https://www.mathewjkavalam.com/assets/svg/svg-map.svg#linkedin"/></svg></a></div><button id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg width="20" height="20"><use xlink:href="https://www.mathewjkavalam.com/assets/svg/svg-map.svg#toparrow"/></svg></button></div></footer><script defer="defer" src="https://www.mathewjkavalam.com/assets/js/scripts.min.js?v=d0fc1030089a37f93a2d51bf6d07565c"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }</script></body></html>
