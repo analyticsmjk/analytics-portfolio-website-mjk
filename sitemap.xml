@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://www.mathewjkavalam.com/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+<loc>https://www.mathewjkavalam.com/</loc>
+</url>
+<url>
+<loc>https://www.mathewjkavalam.com/about/</loc>
+<lastmod>2026-03-23T20:46:59+00:00</lastmod>
+</url>
+<url>
+<loc>https://www.mathewjkavalam.com/bi-directional-relationships/</loc>
+<lastmod>2026-03-22T11:15:08+00:00</lastmod>
+</url>
+<url>
+<loc>https://www.mathewjkavalam.com/sds/</loc>
+<lastmod>2026-03-22T11:14:38+00:00</lastmod>
+<image:image>
+<image:loc>https://www.mathewjkavalam.com/media/posts/3/star-schema.gif</image:loc>
+<image:title><![CDATA[Sales is the central table with the sales figures(Fact table) to which the categorical filter value tables(Dimension tables) are related to.]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://www.mathewjkavalam.com/media/posts/3/gallery/1-YoY-Page.gif</image:loc>
+<image:title><![CDATA[Executive summary]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://www.mathewjkavalam.com/media/posts/3/gallery/2-Trend-Page.gif</image:loc>
+<image:title><![CDATA[Sales trend]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://www.mathewjkavalam.com/media/posts/3/gallery/3-Variance-Page.gif</image:loc>
+<image:title><![CDATA[Sales variance]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://www.mathewjkavalam.com/somebody-said-this-to-me-recently/</loc>
+<lastmod>2026-03-23T10:33:05+00:00</lastmod>
+</url>
+<url>
+<loc>https://www.mathewjkavalam.com/we-often-understand-the-value-of-things-when-they-are-not-around/</loc>
+<lastmod>2026-03-22T16:41:03+00:00</lastmod>
+</url>
+<url>
+<loc>https://www.mathewjkavalam.com/work-in-progress/</loc>
+<lastmod>2026-03-21T20:13:22+00:00</lastmod>
+<image:image>
+<image:loc>https://www.mathewjkavalam.com/media/posts/6/gallery/Setup-Page.gif</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://www.mathewjkavalam.com/media/posts/6/gallery/Setup-Page-2.gif</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://www.mathewjkavalam.com/media/posts/6/gallery/Filter-Page.gif</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://www.mathewjkavalam.com/media/posts/6/gallery/Row-Inspection-Page.gif</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+</url>
+</urlset>
