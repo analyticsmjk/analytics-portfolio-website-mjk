@@ -11,6 +11,20 @@
     },
     "items": [
         {
+            "id": "https://www.mathewjkavalam.com/mcdonalds-hash-bown-nutritional-data-visualisation/",
+            "url": "https://www.mathewjkavalam.com/mcdonalds-hash-bown-nutritional-data-visualisation/",
+            "title": "McDonald&#x27;s Packed Food Data Visualisation",
+            "summary": "<p class=\"align-center\">My suggestion to improve the current infographics on the McDonald's Hash Brown's pouch</p>\n",
+            "content_html": "<p class=\"align-center\">My suggestion to improve the current infographics on the McDonald's Hash Brown's pouch</p>\n\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://www.mathewjkavalam.com/media/posts/15/improved-5.gif\" alt=\"\" width=\"1173\" height=\"445\"></figure>\n<p>Purpose:</p>\n<table style=\"border-collapse: collapse; width: 100%;\" border=\"1\">\n<tbody>\n<tr>\n<td class=\"align-center\" style=\"width: 49.943%;\">Business Requirement</td>\n<td class=\"align-center\" style=\"width: 49.943%;\">Relevant Data </td>\n</tr>\n<tr>\n<td class=\"align-center\" style=\"width: 49.943%;\">Mandatory to declare nutrition information by law</td>\n<td style=\"width: 49.943%;\">\n<p>energy value.<br>amounts of fat, saturates, carbohydrate, sugars, protein and salt</p>\n<p>refer: <a href=\"https://www.food.gov.uk/business-guidance/nutrition-labelling\">food.gov.uk</a></p>\n</td>\n</tr>\n</tbody>\n</table>\n<p>Proposal's merit:</p>\n<table style=\"border-collapse: collapse; width: 100%; height: 226.05px;\" border=\"1\">\n<tbody>\n<tr style=\"height: 48.35px;\">\n<td class=\"align-center\" style=\"width: 49.943%; height: 48.35px;\">Original Visual</td>\n<td class=\"align-center\" style=\"width: 49.943%; height: 48.35px;\">Proposed Visual</td>\n</tr>\n<tr style=\"height: 129.35px;\">\n<td class=\"align-center\" style=\"width: 49.943%; height: 129.35px;\">ticks the box for compliance.</td>\n<td class=\"align-center\" style=\"width: 49.943%; height: 129.35px;\">informs about nutritional value by making the proportion of nutrients in the food compared to daily intake, quick.</td>\n</tr>\n<tr style=\"height: 48.35px;\">\n<td class=\"align-center\" style=\"width: 49.943%; height: 48.35px;\">Ambiguity due to bad labelling 'of which saturates'.</td>\n<td class=\"align-center\" style=\"width: 49.943%; height: 48.35px;\">\n<p>Separted the visuals making the labelling clear. </p>\n</td>\n</tr>\n<tr>\n<td style=\"width: 49.943%;\">Unnessary visual elements like the underline on the percentage(what does it add, am I unaware of something?)</td>\n<td style=\"width: 49.943%;\">Instead of unnecessary underline visual element added a bar chart shading to compliment average daily intake to per hash brown nutrition percentage.</td>\n</tr>\n</tbody>\n</table>\n<p> </p>",
+            "author": {
+                "name": "Mathew Jacob Kavalam"
+            },
+            "tags": [
+            ],
+            "date_published": "2026-04-21T11:15:31+01:00",
+            "date_modified": "2026-04-21T11:22:32+01:00"
+        },
+        {
             "id": "https://www.mathewjkavalam.com/bi-directional-relationships/",
             "url": "https://www.mathewjkavalam.com/bi-directional-relationships/",
             "title": "Many to Many Relationships",
